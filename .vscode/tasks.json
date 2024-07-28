@@ -1,0 +1,27 @@
+{
+   "version": "2.0.0",
+   "tasks": [
+       {
+           "label": "Compile Multi Files",
+           "type": "shell",
+           "command": "gcc",
+           "args": [
+               "-std=c11",
+               "-IAPP",  
+               "-ISERVER",   
+               "-ICARD",     
+               "-ITERMINAL",    
+               "APP/*.c",
+               "SERVER/*.c",
+               "CARD/*.c",
+               "TERMINAL/*.c",
+               "-o",
+               "output.exe"
+           ],
+           "group": {
+               "kind": "build",
+               "isDefault": true
+           }
+       }
+   ]
+}
